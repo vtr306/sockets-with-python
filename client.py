@@ -4,7 +4,7 @@ from _thread import *
 serverPort = 8080
 
 try:
-    serverSocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    clientSocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 except socket.error as e:
     print("Create socket failed: %s" % e)
     sys.exit(1)
