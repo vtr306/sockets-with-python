@@ -23,7 +23,7 @@ print("Server Connection Accepted")
 
 user = input("Insert username: ")
 
-def receiveMessage(connection):
+def sendMessage(connection):
     while True:
         sentence = input()
         try:
@@ -31,7 +31,7 @@ def receiveMessage(connection):
         except socket.error as e:
             print("Error sending data: %s" % e)
 
-def sendMessage(connection):
+def receiveMessage(connection):
     while True:
         try:
             serverSentence = connection.recv(2048)
